@@ -1,0 +1,384 @@
+:root {
+    --clr-neutral-100: #FFF;
+    --clr-neutral-150: #D2D2D2;
+    --clr-neutral-200: #C2C2C2;
+    --clr-neutral-300: #B6C1CB;
+    --clr-neutral-500: #7B7B7B;
+    --clr-neutral-600: #5A5A5A;
+    --clr-neutral-700: #6D6D6D;
+    --clr-neutral-800: #242932;
+    --clr-neutral-900: #1E222A;
+
+    --clr-accent-500: #4EC9D2;
+
+    --clr-alert-500: #ff0000;
+    
+    --ff-primary: 'proxima-nova', 'sans-serif';
+
+    /* font-size: 16px; */
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    font-family: var(--ff-primary);
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+}
+
+@media (min-width: 480px) {
+    body {
+        text-align: left;
+        font-size: 14px;
+        line-height: 1.57
+    }
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--ff-primary);
+}
+
+h2,
+h3,
+p {
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 45px;
+    font-weight: 900;
+    /* bold */
+    line-height: 1;
+}
+
+@media (min-width: 480px) {
+    h1 {
+        font-size: 55px;
+        line-height: 1.24;
+    }
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 1.125;
+}
+
+@media (min-width: 480px) {
+    h2 {
+        font-size: 50px;
+        line-height: 1.22;
+    }
+}
+
+h3 {
+    color: var(--clr-neutral-500);
+    font-size: 14px;
+    line-height: 1.2857;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+@media (min-width: 480px) {
+    h3 {
+        font-size: 20px;
+        line-height: 1.2;
+    }
+}
+
+@media (min-width: 480px) {
+    .tweak {
+        display: none;
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-accent {
+    color: var(--clr-accent-500);
+}
+
+.banner {
+    background-image: url('./assets/stethoscope-1584223-small.png');
+    margin-bottom: 1em;
+    width: 375px;
+    min-width: 375px;
+    height: 244px;
+    background-size: cover;
+}
+
+@media (min-width: 480px) {
+    .banner {
+        background-image: url('./assets/stethoscope-1584223.png');
+        margin: 2em;
+        width: 1770px;
+        min-width: 1770px;
+        height: 402px;
+    }
+}
+
+.content {
+    width: 375px;
+    min-width: 375px;
+    padding: 0 1em 1em 1em;
+}
+
+@media (min-width: 480px) {
+    .content {
+        width: 1770px;
+        min-width: 1770px;
+        padding: 0 4em 4em 4em;
+    }
+}
+
+.split {
+    width: 100%;
+    min-width: calc(375px - 4em);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3em;
+}
+
+@media (min-width: 480px) {
+    .split {
+        width: calc(1770px - 8em);
+        min-width: calc(1770px - 8em);
+        grid-template-columns: 2fr 1fr;
+        gap: 0 55px;
+    }
+}
+
+.buttons {
+    width: 100%;
+    min-width: calc(375px - 4em);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+
+@media (min-width: 480px) {
+    .buttons {
+        width: 100%;
+        flex-direction: row;
+    }
+
+    .buttons>*+* {
+        margin-left: 1em;
+    }
+}
+
+.open-button {
+    width: 298px;
+    height: 62px;
+    background: var(--clr-neutral-800);
+    border-radius: 10px;
+
+    text-align: center;
+    font-family: var(--ff-primary);
+    font-size: 18px;
+    line-height: 1.28;
+    color: var(--clr-neutral-100);
+    text-transform: uppercase;
+}
+
+@media (min-width: 480px) {
+    .open-button {
+        width: 347px;
+        height: 35px;
+        font-size: 20px;
+        line-height: 1.2;
+    }
+}
+
+.boxes {
+    margin-inline: auto;
+    width: 100%;
+    min-width: 298px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(6, 80px);
+    grid-template-columns: repeat(1, 298px);
+    justify-content: center;
+}
+
+@media (min-width: 480px) {
+    .boxes {
+        grid-template-rows: repeat(3, 262px);
+        grid-template-columns: repeat(2, 277px);
+        gap: 0 55px;
+    }
+}
+
+.boxes>* {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 80px;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+@media (min-width: 480px) {
+    .boxes>* {
+        line-height: 262px;
+    }
+}
+
+.boxes>*:nth-child(odd) {
+    text-transform: uppercase;
+    background-color: var(--clr-neutral-100);
+    color: var(--clr-accent-500);
+    border: 1px solid var(--clr-neutral-300);
+}
+
+.boxes>*:nth-child(even) {
+    background: var(--clr-neutral-800);
+    color: var(--clr-neutral-100);
+}
+
+.modal-dialog {
+    width: 755px;
+    height: 565px;
+    padding: 12px 28px;
+    background: var(--clr-neutral-900);
+    box-shadow: 0px 6px 10px var(--clr-neutral-600);
+}
+
+::backdrop {
+    background-color: var(--clr-neutral-200);
+    opacity: 0.64;
+}
+
+.close-button-container {
+    display: flex;
+    justify-content: right;
+    width: 100%;
+
+}
+
+.close-button-container .close-button {
+    width: 17px;
+    height: 39px;
+    background: var(--clr-neutral-900);
+    border: var(--clr-neutral-900);
+    font-family: var(--ff-primary);
+    font-size: 35px;
+    line-height: 1.2;
+    color: var(--clr-accent-500);
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3em;
+}
+
+.form-container h1,
+.form-container h3 {
+    color: var(--clr-neutral-100);
+    text-align: center;
+}
+
+.form-container h1 {
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 1.23;
+}
+
+@media (min-width: 480px) {
+    .form-container h1 {
+        font-size: 45px;
+        line-height: 1.2;
+    }
+}
+
+.form-container h3 {
+    font-size: 14px;
+    line-height: 1.2142;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+@media (min-width: 480px) {
+    .form-container h3 {
+        font-size: 20px;
+        line-height: 1.2;
+        font-weight: 500;
+    }
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 298px;
+    height: 58px;
+    border: 2px solid var(--clr-neutral-300);
+    border-radius: 10px;
+    padding: 1em;
+
+    font-size: 20px;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+@media (min-width: 480px) {
+    input[type="text"],
+    input[type="email"] {
+        width: 512px;
+    }
+}
+
+input:invalid {
+  border: 2px solid var(--clr-alert-500);
+}
+
+input:focus:invalid {
+    border: 2px solid var(--clr-neutral-150);
+}
+
+.submit-button {
+    width: 298px;
+    height: 58px;
+    background-color: var(--clr-accent-500);
+    border: 2px solid var(--clr-neutral-100);
+    border-radius: 10px;
+
+    color: var(--clr-neutral-100);
+    font-size: 20px;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+@media (min-width: 480px) {
+    .submit-button {
+        width: 512px;
+        border-color: var(--clr-neutral-300);
+    }
+}
+
+.submit-button:disabled {
+    opacity: 0.5;
+}
