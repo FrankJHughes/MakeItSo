@@ -35,7 +35,7 @@ body {
     text-align: center;
 }
 
-@media (min-width: 480px) {
+@media only screen and (min-width: 640px) {
     body {
         text-align: left;
         font-size: 14px;
@@ -70,7 +70,7 @@ h1 {
     line-height: 1;
 }
 
-@media (min-width: 480px) {
+@media only screen and (min-width: 640px) {
     h1 {
         font-size: 55px;
         line-height: 1.24;
@@ -83,7 +83,7 @@ h2 {
     line-height: 1.125;
 }
 
-@media (min-width: 480px) {
+@media only screen and (min-width: 640px) {
     h2 {
         font-size: 50px;
         line-height: 1.22;
@@ -98,14 +98,14 @@ h3 {
     text-transform: uppercase;
 }
 
-@media (min-width: 480px) {
+@media only screen and (min-width: 640px) {
     h3 {
         font-size: 20px;
         line-height: 1.2;
     }
 }
 
-@media (min-width: 480px) {
+@media only screen and (min-width: 640px) {
     .tweak {
         display: none;
     }
@@ -128,7 +128,7 @@ h3 {
     background-size: cover;
 }
 
-@media (min-width: 480px) {
+@media only screen and (min-width: 640px) {
     .banner {
         background-image: url('./assets/stethoscope-1584223.png');
         margin: 2em;
@@ -144,7 +144,7 @@ h3 {
     padding: 0 1em 1em 1em;
 }
 
-@media (min-width: 480px) {
+@media only screen and (min-width: 640px) {
     .content {
         width: 1770px;
         min-width: 1770px;
@@ -160,7 +160,7 @@ h3 {
     gap: 3em;
 }
 
-@media (min-width: 480px) {
+@media only screen and (min-width: 640px) {
     .split {
         width: calc(1770px - 8em);
         min-width: calc(1770px - 8em);
@@ -179,7 +179,7 @@ h3 {
 }
 
 
-@media (min-width: 480px) {
+@media only screen and (min-width: 640px) {
     .buttons {
         width: 100%;
         flex-direction: row;
@@ -204,7 +204,7 @@ h3 {
     text-transform: uppercase;
 }
 
-@media (min-width: 480px) {
+@media only screen and (min-width: 640px) {
     .open-button {
         width: 347px;
         height: 35px;
@@ -224,7 +224,7 @@ h3 {
     justify-content: center;
 }
 
-@media (min-width: 480px) {
+@media only screen and (min-width: 640px) {
     .boxes {
         grid-template-rows: repeat(3, 262px);
         grid-template-columns: repeat(2, 277px);
@@ -241,7 +241,7 @@ h3 {
     text-transform: uppercase;
 }
 
-@media (min-width: 480px) {
+@media only screen and (min-width: 640px) {
     .boxes>* {
         line-height: 262px;
     }
@@ -309,7 +309,7 @@ h3 {
     line-height: 1.23;
 }
 
-@media (min-width: 480px) {
+@media only screen and (min-width: 640px) {
     .form-container h1 {
         font-size: 45px;
         line-height: 1.2;
@@ -323,7 +323,7 @@ h3 {
     text-transform: uppercase;
 }
 
-@media (min-width: 480px) {
+@media only screen and (min-width: 640px) {
     .form-container h3 {
         font-size: 20px;
         line-height: 1.2;
@@ -344,7 +344,7 @@ input[type="email"] {
     text-transform: uppercase;
 }
 
-@media (min-width: 480px) {
+@media only screen and (min-width: 640px) {
     input[type="text"],
     input[type="email"] {
         width: 512px;
@@ -372,7 +372,7 @@ input:focus:invalid {
     text-transform: uppercase;
 }
 
-@media (min-width: 480px) {
+@media only screen and (min-width: 640px) {
     .submit-button {
         width: 512px;
         border-color: var(--clr-neutral-300);
