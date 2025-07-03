@@ -190,7 +190,7 @@ h3 {
     height: 62px;
     background: var(--clr-neutral-800);
     border-radius: 10px;
-
+    
     text-align: center;
     font-family: var(--ff-primary);
     font-size: 18px;
@@ -198,10 +198,17 @@ h3 {
     color: var(--clr-neutral-100);
     text-transform: uppercase;
 
+    transition: background-color 2s;
+
     @media only screen and (min-width: 1280px) {
         height: 35px;
         font-size: 20px;
         line-height: 1.2;
+    }
+
+    &:hover {
+        background-color: var(--clr-accent-500);
+        cursor: pointer;
     }
 }
 
@@ -264,11 +271,17 @@ h3 {
 }
 
 .modal-dialog {
-    width: 755px;
-    height: 565px;
-    padding: 12px 28px;
+    padding: 0 1em;
+    width: 100%;
+    max-width: 100%;
     background: var(--clr-neutral-900);
     box-shadow: 0px 6px 10px var(--clr-neutral-600);
+
+    @media only screen and (min-width: 640px) {
+        margin-inline: max(2em, auto);
+        width: calc(100% - 4em);
+        max-width: min(calc(100% - 4em), 755px);
+    }
 }
 
 ::backdrop {
@@ -277,6 +290,7 @@ h3 {
 }
 
 .close-button-container {
+    padding: 0;
     display: flex;
     justify-content: right;
     width: 100%;
@@ -290,6 +304,11 @@ h3 {
         font-size: 35px;
         line-height: 1.2;
         color: var(--clr-accent-500);
+
+        &:hover {
+            cursor: pointer;
+        }
+
     }
 
 }
@@ -299,13 +318,13 @@ h3 {
     flex-direction: column;
     align-items: center;
     gap: 3em;
-}
+    padding: 2em 2em 6em 2em;
 
-.form-container h1,
-.form-container h3 {
-    color: var(--clr-neutral-100);
-    text-align: center;
-
+    h1,
+    h3 {
+        color: var(--clr-neutral-100);
+        text-align: center;
+    }
 
     h1 {
         font-size: 30px;
@@ -336,7 +355,7 @@ input[type="text"],
 input[type="email"] {
     width: 298px;
     height: 58px;
-    border: 2px solid var(--clr-neutral-300);
+    /* border: 2px solid var(--clr-neutral-300); */
     border-radius: 10px;
     padding: 1em;
 
@@ -347,34 +366,51 @@ input[type="email"] {
     @media only screen and (min-width: 640px) {
         width: 512px;
     }
+
+    transition: border-width 2s, border-color 2s;
 }
 
 input:invalid {
-    border: 2px solid var(--clr-alert-500);
+    border: 4px solid var(--clr-alert-500);
 }
 
-input:focus:invalid {
-    border: 2px solid var(--clr-neutral-150);
+input:valid {
+    border: 4px solid green;
 }
+
+/* input:focus:invalid {
+    border: 2px solid var(--clr-neutral-150);
+} */
 
 .submit-button {
     width: 298px;
     height: 58px;
     background-color: var(--clr-accent-500);
-    border: 2px solid var(--clr-neutral-100);
+    border: 4px solid green;
     border-radius: 10px;
+    opacity: 0.5;
 
     color: var(--clr-neutral-100);
     font-size: 20px;
     line-height: 1.2;
     text-transform: uppercase;
 
-    &:disabled {
-        opacity: 0.5;
+    &:hover {
+        opacity: 1;
+        cursor: pointer;
     }
+
+    &:disabled {
+        border-color: var(--clr-alert-500);
+        &:hover {
+            opacity: 0.5;
+            cursor: no-drop;
+        }
+    }
+    
+    transition: border-color 2s, opacity 2s;
 
     @media only screen and (min-width: 640px) {
         width: 512px;
-        border-color: var(--clr-neutral-300);
     }
 }
