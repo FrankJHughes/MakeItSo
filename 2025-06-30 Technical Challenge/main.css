@@ -35,7 +35,7 @@ body {
     text-align: center;
 }
 
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 1536px) {
     body {
         text-align: left;
         font-size: 14px;
@@ -119,79 +119,93 @@ h3 {
     color: var(--clr-accent-500);
 }
 
+.container {
+    margin: 0;
+    width: 100%;
+    min-width: 375px;
+    max-width: 100%;
+}
+
+@media only screen and (min-width: 640px) {
+    .container {
+        margin: 2em 2em 0 2em;
+        width: calc(100% - 4em);
+        min-width: calc(640px - 4em);
+    }
+}
+
+.container--level2 {
+    margin: 2em 2em 2em 2em;
+    min-width: calc(375px - 4em);
+    max-width: calc(100% - 4em);
+}
+
+@media only screen and (min-width: 640px) {
+    .container--level2 {
+        margin: 2em 4em 2em 4em;
+        min-width: calc(375px - 8em);
+        max-width: calc(100% - 8em);
+    }
+}
+
 .banner {
     background-image: url('./assets/stethoscope-1584223-small.png');
-    margin-bottom: 1em;
-    width: 375px;
+    background-size: 100%;
+    width: 100%;
     min-width: 375px;
-    height: 244px;
-    background-size: cover;
+    padding-top: 65%;
 }
 
 @media only screen and (min-width: 640px) {
     .banner {
         background-image: url('./assets/stethoscope-1584223.png');
-        margin: 2em;
-        width: 1770px;
-        min-width: 1770px;
-        height: 402px;
+        background-size: 100%;
+        width: 100%;
+        min-width: 640px;
+        padding-top: 23%;
     }
 }
 
-.content {
-    width: 375px;
-    min-width: 375px;
-    padding: 0 1em 1em 1em;
-}
-
-@media only screen and (min-width: 640px) {
-    .content {
-        width: 1770px;
-        min-width: 1770px;
-        padding: 0 4em 4em 4em;
-    }
-}
-
-.split {
+.split { 
     width: 100%;
-    min-width: calc(375px - 4em);
+    max-width: 100%;
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 3em;
+    gap: 2em;
 }
 
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 1536px) {
     .split {
-        width: calc(1770px - 8em);
-        min-width: calc(1770px - 8em);
         grid-template-columns: 2fr 1fr;
-        gap: 0 55px;
+        gap: 0 4em;
     }
 }
 
 .buttons {
     width: 100%;
-    min-width: calc(375px - 4em);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1em;
+    gap: 2em;
 }
 
 
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 768px) {
     .buttons {
-        width: 100%;
         flex-direction: row;
+        justify-content: center;
     }
+}
 
-    .buttons>*+* {
-        margin-left: 1em;
+@media only screen and (min-width: 1536px) {
+    .buttons {
+        justify-content: left;
     }
 }
 
 .open-button {
-    width: 298px;
+    width: 100%;
+    min-width: 298px;
+    max-width: 298px; 
     height: 62px;
     background: var(--clr-neutral-800);
     border-radius: 10px;
@@ -204,10 +218,9 @@ h3 {
     text-transform: uppercase;
 }
 
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 1280px) {
     .open-button {
-        width: 347px;
-        height: 35px;
+        height: 35px; 
         font-size: 20px;
         line-height: 1.2;
     }
@@ -218,19 +231,41 @@ h3 {
     width: 100%;
     min-width: 298px;
     display: grid;
-    grid-auto-flow: column;
+    grid-auto-flow: column;;
     grid-template-rows: repeat(6, 80px);
     grid-template-columns: repeat(1, 298px);
     justify-content: center;
 }
 
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 768px) {
     .boxes {
-        grid-template-rows: repeat(3, 262px);
-        grid-template-columns: repeat(2, 277px);
-        gap: 0 55px;
+        grid-template-rows: repeat(3, 80px);
+        grid-template-columns: repeat(2, 298px);
+        gap: 0 2em;
     }
 }
+
+@media only screen and (min-width: 1280px) {
+    .boxes {
+        grid-auto-flow: row;
+        grid-template-rows: repeat(2, 80px);
+        grid-template-columns: repeat(3, 298px);
+    }
+}
+
+@media only screen and (min-width: 1536px) {
+    .boxes {
+        justify-content: left;
+        grid-auto-flow: column;
+        grid-template-rows: repeat(3, 262px);
+        grid-template-columns: repeat(2, 277px);
+        gap: 2em;
+    }
+}
+
+
+
+
 
 .boxes>* {
     text-align: center;
@@ -241,7 +276,7 @@ h3 {
     text-transform: uppercase;
 }
 
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 1536px) {
     .boxes>* {
         line-height: 262px;
     }
