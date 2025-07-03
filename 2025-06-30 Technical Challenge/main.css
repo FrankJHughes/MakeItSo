@@ -12,7 +12,7 @@
     --clr-accent-500: #4EC9D2;
 
     --clr-alert-500: #ff0000;
-    
+
     --ff-primary: 'proxima-nova', 'sans-serif';
 
     /* font-size: 16px; */
@@ -33,15 +33,14 @@ body {
     font-size: 15px;
     line-height: 15px;
     text-align: center;
-}
 
-@media only screen and (min-width: 1536px) {
-    body {
+    @media only screen and (min-width: 1536px) {
         text-align: left;
         font-size: 14px;
         line-height: 1.57
     }
 }
+
 
 body,
 h1,
@@ -66,12 +65,9 @@ p {
 h1 {
     font-size: 45px;
     font-weight: 900;
-    /* bold */
     line-height: 1;
-}
 
-@media only screen and (min-width: 640px) {
-    h1 {
+    @media only screen and (min-width: 640px) {
         font-size: 55px;
         line-height: 1.24;
     }
@@ -81,10 +77,8 @@ h2 {
     font-size: 40px;
     font-weight: 300;
     line-height: 1.125;
-}
 
-@media only screen and (min-width: 640px) {
-    h2 {
+    @media only screen and (min-width: 640px) {
         font-size: 50px;
         line-height: 1.22;
     }
@@ -96,17 +90,15 @@ h3 {
     line-height: 1.2857;
     font-weight: 500;
     text-transform: uppercase;
-}
 
-@media only screen and (min-width: 640px) {
-    h3 {
+    @media only screen and (min-width: 640px) {
         font-size: 20px;
         line-height: 1.2;
     }
 }
 
-@media only screen and (min-width: 640px) {
-    .tweak {
+.tweak {
+    @media only screen and (min-width: 640px) {
         display: none;
     }
 }
@@ -124,10 +116,8 @@ h3 {
     width: 100%;
     min-width: 375px;
     max-width: 100%;
-}
 
-@media only screen and (min-width: 640px) {
-    .container {
+    @media only screen and (min-width: 640px) {
         margin: 2em 2em 0 2em;
         width: calc(100% - 4em);
         min-width: calc(640px - 4em);
@@ -138,14 +128,12 @@ h3 {
     margin: 2em 2em 2em 2em;
     min-width: calc(375px - 4em);
     max-width: calc(100% - 4em);
-}
 
-@media only screen and (min-width: 640px) {
-    .container--level2 {
+    @media only screen and (min-width: 640px) {
         margin: 2em 4em 2em 4em;
         min-width: calc(375px - 8em);
         max-width: calc(100% - 8em);
-    }
+   }
 }
 
 .banner {
@@ -166,15 +154,13 @@ h3 {
     }
 }
 
-.split { 
+.split {
     width: 100%;
     max-width: 100%;
     display: grid;
     gap: 2em;
-}
 
-@media only screen and (min-width: 1536px) {
-    .split {
+    @media only screen and (min-width: 1536px) {
         grid-template-columns: 2fr 1fr;
         gap: 0 4em;
     }
@@ -186,18 +172,13 @@ h3 {
     flex-direction: column;
     align-items: center;
     gap: 2em;
-}
 
-
-@media only screen and (min-width: 768px) {
-    .buttons {
+    @media only screen and (min-width: 768px) {
         flex-direction: row;
         justify-content: center;
     }
-}
 
-@media only screen and (min-width: 1536px) {
-    .buttons {
+    @media only screen and (min-width: 1536px) {
         justify-content: left;
     }
 }
@@ -205,7 +186,7 @@ h3 {
 .open-button {
     width: 100%;
     min-width: 298px;
-    max-width: 298px; 
+    max-width: 298px;
     height: 62px;
     background: var(--clr-neutral-800);
     border-radius: 10px;
@@ -216,11 +197,9 @@ h3 {
     line-height: 1.28;
     color: var(--clr-neutral-100);
     text-transform: uppercase;
-}
 
-@media only screen and (min-width: 1280px) {
-    .open-button {
-        height: 35px; 
+    @media only screen and (min-width: 1280px) {
+        height: 35px;
         font-size: 20px;
         line-height: 1.2;
     }
@@ -231,67 +210,57 @@ h3 {
     width: 100%;
     min-width: 298px;
     display: grid;
-    grid-auto-flow: column;;
+    grid-auto-flow: column;
+    ;
     grid-template-rows: repeat(6, 80px);
     grid-template-columns: repeat(1, 298px);
     justify-content: center;
-}
 
-@media only screen and (min-width: 768px) {
-    .boxes {
+    @media only screen and (min-width: 768px) {
         grid-template-rows: repeat(3, 80px);
         grid-template-columns: repeat(2, 298px);
         gap: 0 2em;
     }
-}
 
-@media only screen and (min-width: 1280px) {
-    .boxes {
+    @media only screen and (min-width: 1280px) {
         grid-auto-flow: row;
         grid-template-rows: repeat(2, 80px);
         grid-template-columns: repeat(3, 298px);
     }
-}
 
-@media only screen and (min-width: 1536px) {
-    .boxes {
+    @media only screen and (min-width: 1536px) {
         justify-content: left;
         grid-auto-flow: column;
         grid-template-rows: repeat(3, 262px);
         grid-template-columns: repeat(2, 277px);
         gap: 2em;
     }
-}
 
+    & > * {
+        text-align: center;
+        vertical-align: middle;
+        line-height: 80px;
+        font-size: 20px;
+        font-weight: 500;
+        text-transform: uppercase;
 
-
-
-
-.boxes>* {
-    text-align: center;
-    vertical-align: middle;
-    line-height: 80px;
-    font-size: 20px;
-    font-weight: 500;
-    text-transform: uppercase;
-}
-
-@media only screen and (min-width: 1536px) {
-    .boxes>* {
-        line-height: 262px;
+        @media only screen and (min-width: 1536px) {
+            line-height: 262px;
+        }
     }
-}
 
-.boxes>*:nth-child(odd) {
-    text-transform: uppercase;
-    background-color: var(--clr-neutral-100);
-    color: var(--clr-accent-500);
-    border: 1px solid var(--clr-neutral-300);
-}
+    & > *:nth-child(odd) {
+        text-transform: uppercase;
+        background-color: var(--clr-neutral-100);
+        color: var(--clr-accent-500);
+        border: 1px solid var(--clr-neutral-300);
+    }
 
-.boxes>*:nth-child(even) {
-    background: var(--clr-neutral-800);
-    color: var(--clr-neutral-100);
+    & > *:nth-child(even) {
+        background: var(--clr-neutral-800);
+        color: var(--clr-neutral-100);
+    }
+
 }
 
 .modal-dialog {
@@ -312,17 +281,17 @@ h3 {
     justify-content: right;
     width: 100%;
 
-}
+    .close-button {
+        width: 17px;
+        height: 39px;
+        background: var(--clr-neutral-900);
+        border: var(--clr-neutral-900);
+        font-family: var(--ff-primary);
+        font-size: 35px;
+        line-height: 1.2;
+        color: var(--clr-accent-500);
+    }
 
-.close-button-container .close-button {
-    width: 17px;
-    height: 39px;
-    background: var(--clr-neutral-900);
-    border: var(--clr-neutral-900);
-    font-family: var(--ff-primary);
-    font-size: 35px;
-    line-height: 1.2;
-    color: var(--clr-accent-500);
 }
 
 .form-container {
@@ -336,33 +305,30 @@ h3 {
 .form-container h3 {
     color: var(--clr-neutral-100);
     text-align: center;
-}
 
-.form-container h1 {
-    font-size: 30px;
-    font-weight: 300;
-    line-height: 1.23;
-}
 
-@media only screen and (min-width: 640px) {
-    .form-container h1 {
-        font-size: 45px;
-        line-height: 1.2;
+    h1 {
+        font-size: 30px;
+        font-weight: 300;
+        line-height: 1.23;
+
+        @media only screen and (min-width: 640px) {
+            font-size: 45px;
+            line-height: 1.2;
+        }
     }
-}
 
-.form-container h3 {
-    font-size: 14px;
-    line-height: 1.2142;
-    font-weight: 300;
-    text-transform: uppercase;
-}
+    h3 {
+        font-size: 14px;
+        line-height: 1.2142;
+        font-weight: 300;
+        text-transform: uppercase;
 
-@media only screen and (min-width: 640px) {
-    .form-container h3 {
-        font-size: 20px;
-        line-height: 1.2;
-        font-weight: 500;
+        @media only screen and (min-width: 640px) {
+            font-size: 20px;
+            line-height: 1.2;
+            font-weight: 500;
+        }
     }
 }
 
@@ -377,17 +343,14 @@ input[type="email"] {
     font-size: 20px;
     line-height: 1.2;
     text-transform: uppercase;
-}
 
-@media only screen and (min-width: 640px) {
-    input[type="text"],
-    input[type="email"] {
+    @media only screen and (min-width: 640px) {
         width: 512px;
     }
 }
 
 input:invalid {
-  border: 2px solid var(--clr-alert-500);
+    border: 2px solid var(--clr-alert-500);
 }
 
 input:focus:invalid {
@@ -405,15 +368,13 @@ input:focus:invalid {
     font-size: 20px;
     line-height: 1.2;
     text-transform: uppercase;
-}
 
-@media only screen and (min-width: 640px) {
-    .submit-button {
+    &:disabled {
+        opacity: 0.5;
+    }
+
+    @media only screen and (min-width: 640px) {
         width: 512px;
         border-color: var(--clr-neutral-300);
     }
-}
-
-.submit-button:disabled {
-    opacity: 0.5;
 }
